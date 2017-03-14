@@ -55,10 +55,12 @@
 		}
 		.win .login{
 			top: 40%;
+			z-index: 1;
 		}
 		.win .reg{
 			top: 35%;
-			display: none;
+			opacity: 0;
+			z-index:-1;
 		}
 		.win .login>div,
 		.win .reg>div{
@@ -165,37 +167,8 @@
 			</div>
 			<!--登录窗口:结束-->
 		</div>
-		<script src="js/jquery-1.11.3.js"></script>
 		<!--主容器:结束-->
 		<script>
-		//通过jquery实现淡入淡出
-		$(function(){
-			//alert($);
-			var signUp=$("#signUp1");
-			var signIn=$("#signIn2");
-			var wLogin=$(".win .login");
-			var wReg=$(".win .reg");
-			signUp.click(function(){
-				/*
-				wLogin.fadeOut("1000");
-				wReg.fadeIn("1000");
-				*/
-				
-				wLogin.slideUp(2000);
-				wReg.slideDown(2000);
-
-			})
-			signIn.click(function(){
-				/*
-				wLogin.fadeIn("1000");
-				wReg.fadeOut("1000");
-				*/
-				wLogin.slideDown(2000);
-				wReg.slideUp(2000);
-			})
-		})
-		//20170313 15:36:纯js实现淡入淡出
-		/*
 			//getObj()获取对象
 			function getObj(id){
 				return document.getElementById(id);
@@ -243,7 +216,7 @@
 						obj.style.opacity=n;
 					},t);
 				}
-			}*/
+			}
 		</script>
 	</body>
 </html>
